@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/tennis-players/containers', 'TennisPlayer\ContainerController@run');
+Route::get('/online-stores/products', 'OnlineStore\ProductController@index');
+Route::get('/online-stores/orders', 'OnlineStore\OrderController@index');
 Route::post('/online-stores/orders', 'OnlineStore\OrderController@create');
