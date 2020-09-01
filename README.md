@@ -54,6 +54,28 @@ To use the API, change `{{axmos_host}}` with active Axmos Host, eg: `http://loca
 POST {{axmos_host}}/api/tennis-players/containers
 Body:
 {
-  total_containers: 100 (number, required)
+  total_containers: 100 # (integer, required)
 }
+```
+
+2. Online Store
+* Get All Products
+``` sh
+GET {{axmost_host}}/api/online-stores/products
+```
+
+* Create New Order
+``` sh
+POST {{axmost_host}}/api/online-stores/orders
+Body:
+{
+  user_id: 1, # (integer, required)
+  product_id: 1, # (integer, required)
+  quantity: 2 # (integer, required)
+}
+```
+
+* Get All Orders
+``` sh
+GET {{axmost_host}}/api/online-stores/orders
 ```
