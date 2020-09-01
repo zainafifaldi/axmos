@@ -20,7 +20,7 @@ class Container extends Model
   }
 
   public function is_full() {
-    return $this->quantity >= $this->capacity;
+    return $this->quantity >= self::$capacity;
   }
 
   /** Fill container with only one ball */

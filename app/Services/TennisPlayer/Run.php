@@ -32,6 +32,25 @@ class Run {
   }
 
   private function put_ball_randomly_to_container() {
-    return $this->containers[0];
+    $verified_container = null;
+    while (!$verified_container) {
+      $container_index = rand(0, ($this->total_containers - 1));
+      $this->containers[$container_index]->fill_it();
+
+      if ($this->containers[$container_index]->is_full()) {
+        $verified_container = $this->containers[$container_index];
+      }
+    }
+
+    /** Uncomment to see each container */
+    /*
+    for ($i = 0; $i < $this->total_containers; $i++) {
+      echo $this->containers[$i]->name . "<br/>";
+      echo $this->containers[$i]->quantity . "<br/>";
+      echo "=====<br/>";
+    }
+    */
+
+    return $verified_container;
   }
 }

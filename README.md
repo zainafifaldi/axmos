@@ -39,9 +39,19 @@ php artisan key:generate
 php artisan migrate
 ```
 
-7. Run server with artisan
+7. Run server with artisan (Server will running in port `8000`)
 ``` sh
 php artisan serve
 ```
 
 ## How to Use (API Documentation)
+To use the API, change `{{axmos_host}}` with active Axmos Host, eg: `http://localhost:8000`
+1. Tennis Player
+* Run Load Ball Into Container
+``` sh
+POST {{axmos_host}}/api/tennis-players/containers
+Body:
+{
+  total_containers: 100 (number, required)
+}
+```
