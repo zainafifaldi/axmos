@@ -4,6 +4,7 @@ namespace App\Http\Controllers\OnlineStore;
 
 use App\Http\Resourceable,
     App\Models\OnlineStore\Order,
+    App\Services\OnlineStoreService,
     Illuminate\Http\Request,
     Illuminate\Routing\Controller as BaseController;
 
@@ -16,7 +17,7 @@ class OrderController extends BaseController
   }
 
   public function create(Request $request) {
-    $order = Order::first();
+    $order = OnlineStoreService::create($request->all());
 
     return Resourceable::render('OnlineStore\OrderResource', $order, 201);
   }
