@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/tennis-players/containers', 'TennisPlayer\ContainerController@run');
+Route::post('/online-stores/orders', 'OnlineStore\OrderController@create');

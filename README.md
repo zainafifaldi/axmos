@@ -37,6 +37,8 @@ php artisan key:generate
 6. Run database migration
 ``` sh
 php artisan migrate
+php artisan db:seed
+composer dump-autoload # If seeding shows error (Then redo seed command)
 ```
 
 7. Run server with artisan (Server will running in port `8000`)

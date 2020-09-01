@@ -24,4 +24,13 @@ class Resourceable {
 
     return $response;
   }
+
+  public static function message($message, $httpStatus) {
+    return response()->json([
+      'message' => $message,
+      'meta'    => [
+        'http_status' => $httpStatus
+      ]
+    ]);
+  }
 }
