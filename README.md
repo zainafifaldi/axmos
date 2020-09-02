@@ -80,6 +80,12 @@ Body:
 GET {{axmost_host}}/api/online-stores/orders
 ```
 
+3. Home Key
+* Find Key
+``` sh
+POST {{axmost_host}}/api/home-keys/finders
+```
+
 ## Testing Race Condition (Online Store Minus Quantity-s Problem Case)
 To test this problem case, open the URL and follow instructions inside
 ``` sh

@@ -2,8 +2,7 @@
 
 namespace App\Services\TennisPlayer;
 
-use App\Models\TennisPlayer\Container,
-    Illuminate\Support\Facades\DB;
+use App\Models\TennisPlayer\Container;
 
 class Run {
   public $total_containers;
