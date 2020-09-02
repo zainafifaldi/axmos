@@ -35,6 +35,7 @@ class Create {
   }
 
   private function reduce_quantity() {
+    /** Remove `->lockForUpdate()` method calling and add `sleep(1);` in line 40 to see race condition bad impact */
     $product = $this->order->product()->lockForUpdate()->first();
     $product->quantity -= $this->order->quantity;
     if ($product->quantity < 0) {

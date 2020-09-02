@@ -79,3 +79,10 @@ Body:
 ``` sh
 GET {{axmost_host}}/api/online-stores/orders
 ```
+
+## Testing Race Condition (Online Store Minus Quantity-s Problem Case)
+To test this problem case, open the URL and follow instructions inside
+``` sh
+{{axmost_host}}/online-store/test
+```
+Notes: On local environment, Axmos can't serve concurrent request at the same time. Use duplicating project to test it.
