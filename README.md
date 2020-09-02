@@ -25,6 +25,7 @@ cp .env.example .env
 3. Install vendor with composer
 ``` sh
 composer update --no-scripts
+composer dump-autoload
 ```
 
 4. Generate application key (This will add key to your APP_KEY inside .env file automatically)
@@ -38,7 +39,6 @@ php artisan key:generate
 ``` sh
 php artisan migrate
 php artisan db:seed
-composer dump-autoload # If seeding shows error (Then redo seed command)
 ```
 
 7. Run server with artisan (Server will running in port `8000`)
